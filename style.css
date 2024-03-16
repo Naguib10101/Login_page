@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+:root{
+    --bg-color: #eee;
+    --w-color : #fff; 
+    --dark-color:#888;
+    --fc-color: #0877f7;
+    --bor_1 : 1rem;
+}
+
+
+html{
+    font-size: 10px;
+}
+
+.container{
+    width: 77rem;
+    padding: 1rem;
+    margin: 5rem auto;
+    background: var(--bg-color);
+    border-radius: var(--bor_1);
+    -webkit-border-radius: var(--bor_1);
+    -moz-border-radius: var(--bor_1);
+    -ms-border-radius: var(--bor_1);
+    -o-border-radius: var(--bor_1);
+}
+
+.grid-system{
+    background: var(--w-color);
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 2rem;
+    border-radius: var(--bor_1) var(--bor_1) 0 0;
+    -webkit-border-radius: var(--bor_1) var(--bor_1) 0 0;
+    -moz-border-radius: var(--bor_1) var(--bor_1) 0 0;
+    -ms-border-radius: var(--bor_1) var(--bor_1) 0 0;
+    -o-border-radius: var(--bor_1) var(--bor_1) 0 0;
+}
+
+.login{
+    grid-column: span 3;
+    background: var(--fc-color);
+    color: var(--w-color);
+    text-align: center;
+    padding: 1.5rem;
+    font: italic bold 2.5rem monospace;
+    border-radius: var(--bor_1) var(--bor_1) 0 0;
+    -webkit-border-radius: var(--bor_1) var(--bor_1) 0 0;
+    -moz-border-radius: var(--bor_1) var(--bor_1) 0 0;
+    -ms-border-radius: var(--bor_1) var(--bor_1) 0 0;
+    -o-border-radius: var(--bor_1) var(--bor_1) 0 0;
+}
+
+.left-section{
+    width: 30rem;
+    margin: 0 2rem;
+}
+.left-section form label{
+    display: block;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    color: var(--dark-color);
+}
+
+input[type = "email"] ,
+input[type = "password"]{
+    display: block;
+    width: 90%;
+    caret-color: var(--fc-color);
+    outline: none;
+    border: none;
+    background: beige;
+    padding: 0.8rem;
+    border-radius: var(--bor_1);
+    -webkit-border-radius: var(--bor_1);
+    -moz-border-radius: var(--bor_1);
+    -ms-border-radius: var(--bor_1);
+    -o-border-radius: var(--bor_1);
+}
+
+input[type="button"] {
+    margin: 1.5rem 0;
+    border: none;
+    background: var(--fc-color);
+    color: var(--w-color);
+    font-size: 1.5rem;
+    display: block;
+    width: 90%;
+    padding: 0.5rem 1rem;
+    border-radius: var(--bor_1);
+    -webkit-border-radius: var(--bor_1);
+    -moz-border-radius: var(--bor_1);
+    -ms-border-radius: var(--bor_1);
+    -o-border-radius: var(--bor_1);
+    cursor: pointer;
+}
+
+.separator::before {
+    content: '';
+    position: absolute;
+    top: 1.5rem;
+    left: 50%;
+    width: 0.1rem;
+    height: 8rem;
+    background: var(--dark-color);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-color);
+    font-size: 1.3rem;
+    position: relative;
+}
+
+
+.separator::after{
+    content: '';
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    width: 0.1rem;
+    height: 8rem;
+    background: var(--dark-color);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.right-section{
+    width: 30rem;
+    margin: 0 2rem;
+}
+
+.right-section p{
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--dark-color);
+    margin: 0.5rem 0 2rem 0;
+}
+
+.right-section a{
+    display: block;
+    text-decoration: none;
+    color: var(--w-color);
+    margin: 1.5rem 0;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--bor_1);
+    -webkit-border-radius: var(--bor_1);
+    -moz-border-radius: var(--bor_1);
+    -ms-border-radius: var(--bor_1);
+    -o-border-radius: var(--bor_1);
+}
+
+.social-media a:first-child{
+    background: var(--fc-color);
+}
+.social-media a:nth-child(2){
+    background: #1EA1F2;
+}
+.social-media a:last-child{
+    background: #0277B5;
+}
